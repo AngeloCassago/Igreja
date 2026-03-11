@@ -1,0 +1,125 @@
+<div class="visitante">
+
+  <h1>Cadastro de Visitante</h1>
+
+  <p class="subtitulo">
+    Seja muito bem-vindo!<br>
+    Preencha suas informações para que possamos conhecê-lo melhor.
+  </p>
+
+  <!-- mensagem de erro -->
+  <div *ngIf="erro" class="erro">
+    ⚠ Por favor, preencha todos os campos antes de continuar.
+  </div>
+
+  <form (ngSubmit)="enviarCadastro(formVisitante)" #formVisitante="ngForm">
+
+    <!-- Nome -->
+    <div class="campo">
+      <label for="nome">Nome completo</label>
+      <input
+        id="nome"
+        type="text"
+        name="nome"
+        placeholder="Digite seu nome"
+        required
+        ngModel>
+    </div>
+
+    <!-- Email -->
+    <div class="campo">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="Digite seu email"
+        required
+        ngModel>
+    </div>
+
+    <!-- Telefone -->
+    <div class="campo">
+      <label for="telefone">Telefone / WhatsApp</label>
+      <input
+        id="telefone"
+        type="text"
+        name="telefone"
+        placeholder="(21) 99999-9999"
+        (input)="formatarTelefone($event)"
+        required
+        ngModel>
+    </div>
+
+    <!-- Pergunta 1 -->
+    <div class="pergunta">
+
+      <p>Deseja receber informações da igreja?</p>
+
+      <div class="radio">
+
+        <label class="opcao">
+          <input
+            type="radio"
+            name="info"
+            value="sim"
+            required
+            ngModel>
+          Sim
+        </label>
+
+        <label class="opcao">
+          <input
+            type="radio"
+            name="info"
+            value="nao"
+            required
+            ngModel>
+          Não
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="pergunta">
+
+      <p>A igreja pode entrar em contato com você?</p>
+
+      <div class="radio">
+
+        <label class="opcao">
+          <input
+            type="radio"
+            name="contato"
+            value="sim"
+            required
+            ngModel>
+          Sim
+        </label>
+
+        <label class="opcao">
+          <input
+            type="radio"
+            name="contato"
+            value="nao"
+            required
+            ngModel>
+          Não
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- Botão -->
+    <div class="botao-enviar">
+      <button type="submit">
+        Finalizar Cadastro
+      </button>
+    </div>
+
+  </form>
+
+</div>

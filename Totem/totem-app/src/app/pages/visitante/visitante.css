@@ -1,0 +1,162 @@
+/* Estrutura da página */
+
+.visitante{
+
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  justify-content:flex-start;
+
+  text-align:center;
+
+  padding-top:80px;
+  padding-left:30px;
+  padding-right:30px;
+
+  max-width:700px;
+  margin:auto;
+}
+
+/* Título */
+
+.visitante h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+/* Subtítulo */
+
+.subtitulo{
+  font-size:22px;
+  margin-bottom:40px;
+  color:#555;
+}
+
+/* Formulário */
+
+form{
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+/* Campos */
+
+.campo{
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+}
+
+/* Label */
+
+label{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+/* Inputs */
+
+input{
+  width:100%;
+
+  padding:20px;
+
+  font-size:22px;
+
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+/* Pergunta */
+
+.pergunta{
+  text-align:left;
+}
+
+.pergunta p{
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+/* Radios */
+
+.radio{
+  display:flex;
+  gap:40px;
+  font-size:22px;
+}
+
+.opcao{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.opcao input{
+  transform:scale(1.5);
+}
+
+/* Botão (mesmo padrão do home.css) */
+
+.botao-enviar{
+  margin-top:50px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Botão principal */
+
+.botao-enviar button{
+
+  width:420px;
+
+  padding:24px;
+
+  font-size:26px;
+  font-weight:bold;
+
+  border:none;
+  border-radius:14px;
+
+  background:#184F35;
+  color:white;
+
+  cursor:pointer;
+
+  transition:all 0.25s ease;
+}
+
+/* Hover */
+
+.botao-enviar button:hover{
+
+  background:#E3A66A;
+  color:#2F2622;
+
+  transform:scale(1.05);
+}
+
+/* Mensagem de erro */
+
+.erro{
+
+  margin-bottom:20px;
+
+  padding:15px;
+
+  background:#ffe0e0;
+
+  color:#a10000;
+
+  font-size:22px;
+
+  border-radius:10px;
+}

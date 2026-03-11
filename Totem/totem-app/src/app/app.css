@@ -1,0 +1,56 @@
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* barra superior */
+
+.topo{
+  background:#184F35;
+  padding:10px 20px;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+/* menu */
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap:35px;
+}
+
+/* logo */
+
+.logo{
+  height:60px;
+}
+
+/* links */
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+.menu a:hover{
+  color:#E3A66A;
+}
+
+/* destaque página ativa */
+
+.menu a.active{
+  border-bottom:3px solid #E3A66A;
+  padding-bottom:4px;
+}
+
+/* conteúdo */
+
+.conteudo{
+  padding:40px;
+}

@@ -1,0 +1,84 @@
+/* Estrutura da página */
+
+.home{
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  justify-content:flex-start;
+
+  text-align:center;
+
+  padding-top:80px;
+}
+
+/* Logo */
+
+.logo-home{
+  width:220px;
+  margin-bottom:20px;
+}
+
+/* Título */
+
+.home h1{
+  font-size:48px;
+  color:#184F35;
+  margin-bottom:10px;
+}
+
+/* Texto abaixo do título */
+
+.descricao{
+  font-size:24px;
+  color:#2F2622;
+  margin-bottom:30px;
+}
+
+/* Menu do Totem */
+
+.menu-totem{ 
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:25px;
+}
+
+/* Botões */
+
+.menu-totem button,
+.btn-menu{
+
+  width:420px;
+
+  padding:24px;
+
+  font-size:26px;
+  font-weight:bold;
+
+  border:none;
+  border-radius:14px;
+
+  background:#184F35;
+  color:white;
+
+  text-align:center;
+  text-decoration:none;
+
+  cursor:pointer;
+
+  transition:all 0.25s ease;
+}
+
+/* Hover */
+
+.menu-totem button:hover,
+.btn-menu:hover{
+
+  background:#E3A66A;
+  color:#2F2622;
+
+  transform:scale(1.05);
+}
