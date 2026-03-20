@@ -1,28 +1,104 @@
+/* ============================= */
+/* Estrutura */
+/* ============================= */
+
 .sucesso{
 
-  text-align:center;
-  margin-top:120px;
+  min-height:100vh;
 
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:20px;
 }
+
+/* ============================= */
+/* Título */
+/* ============================= */
 
 .sucesso h1{
 
   font-size:42px;
   color:#184F35;
 
+  margin-bottom:20px;
 }
+
+/* ============================= */
+/* Texto */
+/* ============================= */
 
 .sucesso p{
 
   font-size:24px;
-  margin-top:20px;
+  margin-top:10px;
 
+  color:#2F2622;
 }
+
+/* ============================= */
+/* Mensagem de retorno */
+/* ============================= */
 
 .retorno{
 
   margin-top:40px;
   font-size:20px;
   color:#666;
+
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px){
+
+  .sucesso h1{
+    font-size:36px;
+  }
+
+  .sucesso p{
+    font-size:22px;
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px){
+
+  .sucesso{
+    padding:30px 20px;
+  }
+
+  .sucesso h1{
+    font-size:28px;
+  }
+
+  .sucesso p{
+    font-size:18px;
+  }
+
+  .retorno{
+    font-size:16px;
+  }
+
+}
+
+/* Telas grandes (Totem / TV) */
+@media (min-width: 1200px){
+
+  .sucesso h1{
+    font-size:52px;
+  }
+
+  .sucesso p{
+    font-size:28px;
+  }
 
 }

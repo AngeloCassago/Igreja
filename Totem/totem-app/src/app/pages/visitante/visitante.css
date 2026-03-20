@@ -1,4 +1,6 @@
+/* ============================= */
 /* Estrutura da página */
+/* ============================= */
 
 .visitante{
 
@@ -12,22 +14,25 @@
 
   text-align:center;
 
-  padding-top:80px;
-  padding-left:30px;
-  padding-right:30px;
+  padding:40px 20px;
 
-  max-width:700px;
+  max-width:100%;
   margin:auto;
 }
 
+/* ============================= */
 /* Título */
+/* ============================= */
 
 .visitante h1{
   font-size:40px;
   margin-bottom:10px;
+  color:#184F35;
 }
 
+/* ============================= */
 /* Subtítulo */
+/* ============================= */
 
 .subtitulo{
   font-size:22px;
@@ -35,7 +40,9 @@
   color:#555;
 }
 
+/* ============================= */
 /* Formulário */
+/* ============================= */
 
 form{
   width:100%;
@@ -45,7 +52,9 @@ form{
   gap:30px;
 }
 
+/* ============================= */
 /* Campos */
+/* ============================= */
 
 .campo{
   display:flex;
@@ -60,7 +69,9 @@ label{
   margin-bottom:8px;
 }
 
+/* ============================= */
 /* Inputs */
+/* ============================= */
 
 input{
   width:100%;
@@ -71,9 +82,20 @@ input{
 
   border-radius:10px;
   border:1px solid #ccc;
+
+  transition:0.2s;
 }
 
+/* foco no input */
+
+input:focus{
+  outline:none;
+  border:2px solid #184F35;
+}
+
+/* ============================= */
 /* Pergunta */
+/* ============================= */
 
 .pergunta{
   text-align:left;
@@ -84,39 +106,65 @@ input{
   margin-bottom:15px;
 }
 
+/* ============================= */
 /* Radios */
+/* ============================= */
 
 .radio{
   display:flex;
-  gap:40px;
-  font-size:22px;
+  align-items:center;
+
+  gap:15px;
+
+  flex-wrap:wrap;
 }
 
+/* opção estilo botão (melhor UX) */
+
 .opcao{
-  display:flex;
+  display:inline-flex; /* 🔥 importante */
   align-items:center;
-  gap:10px;
+
+  gap:6px; /* controla distância EXATA */
+
+  padding:8px 12px;
+
+  border-radius:10px;
+
+  background:#f0f0f0;
+
+  cursor:pointer;
+
+  width:auto;
+}
+
+.opcao:hover{
+  background:#e0e0e0;
 }
 
 .opcao input{
-  transform:scale(1.5);
+  margin:0;
+  transform:scale(1.2);
+
+  flex-shrink:0; /* 🔥 impede deformação */
 }
 
-/* Botão (mesmo padrão do home.css) */
+/* ============================= */
+/* Botão */
+/* ============================= */
 
 .botao-enviar{
-  margin-top:50px;
+  margin-top:40px;
 
   display:flex;
-  flex-direction:column;
-  align-items:center;
+  justify-content:center;
+  width:100%;
 }
-
-/* Botão principal */
 
 .botao-enviar button{
 
-  width:420px;
+  width:100%;
+  max-width:420px;
 
   padding:24px;
 
@@ -132,6 +180,8 @@ input{
   cursor:pointer;
 
   transition:all 0.25s ease;
+
+  min-height:70px;
 }
 
 /* Hover */
@@ -144,7 +194,9 @@ input{
   transform:scale(1.05);
 }
 
+/* ============================= */
 /* Mensagem de erro */
+/* ============================= */
 
 .erro{
 
@@ -159,4 +211,93 @@ input{
   font-size:22px;
 
   border-radius:10px;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px){
+
+  .visitante h1{
+    font-size:34px;
+  }
+
+  .subtitulo{
+    font-size:20px;
+  }
+
+  label{
+    font-size:20px;
+  }
+
+  input{
+    font-size:20px;
+    padding:18px;
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px){
+
+  .visitante{
+    padding:30px 15px;
+  }
+
+  .visitante h1{
+    font-size:28px;
+  }
+
+  .subtitulo{
+    font-size:18px;
+  }
+
+  label{
+    font-size:18px;
+  }
+
+  input{
+    font-size:18px;
+    padding:15px;
+  }
+
+  /* 🔥 radio empilhado */
+  .radio{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .pergunta p{
+    font-size:20px;
+  }
+
+  .botao-enviar button{
+    font-size:20px;
+    padding:18px;
+  }
+
+}
+
+/* Telas grandes (Totem / TV) */
+@media (min-width: 1200px){
+
+  .visitante h1{
+    font-size:44px;
+  }
+
+  .subtitulo{
+    font-size:24px;
+  }
+
+  input{
+    font-size:24px;
+  }
+
+  .botao-enviar button{
+    font-size:28px;
+    max-width:480px;
+  }
+
 }

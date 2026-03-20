@@ -1,10 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================= */
+/* Reset básico */
+/* ============================= */
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ============================= */
+/* Estrutura base */
+/* ============================= */
+
 html, body {
   height:100%;
-  margin:0;
 }
+
+/* ============================= */
+/* Body */
+/* ============================= */
 
 body{
   font-family: Arial, Helvetica, sans-serif;
   background:#f4f4f4;
+
+  color:#2F2622;
+
+  /* melhora renderização */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================= */
+/* Tipografia global */
+/* ============================= */
+
+h1, h2, h3{
+  font-weight:bold;
+}
+
+/* ============================= */
+/* Botões globais */
+/* ============================= */
+
+button{
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* remove efeito azul no mobile */
+button:focus{
+  outline:none;
+}
+
+/* ============================= */
+/* Inputs globais */
+/* ============================= */
+
+input{
+  font-family: inherit;
+}
+
+/* ============================= */
+/* Scroll (opcional - mais bonito) */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* ============================= */
+/* Área clicável maior (TOTEM) */
+/* ============================= */
+
+button, a{
+  min-height: 44px;
+}
+
+/* ============================= */
+/* Centralização padrão (helper) */
+/* ============================= */
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
 }

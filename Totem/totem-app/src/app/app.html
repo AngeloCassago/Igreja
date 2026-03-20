@@ -1,22 +1,20 @@
-<div class="app-container">
+<div class="topo">
 
-  <!-- Menu fixo -->
   <nav class="menu">
 
     <a routerLink="/" class="logo-link">
       <img src="assets/logo.png" class="logo">
     </a>
 
-    <a routerLink="/visitante">Visitante</a>
-    <a routerLink="/historia">História da Igreja</a>
-    <a routerLink="/missoes">Missões</a>
-    <a routerLink="/projetos-sociais">Projetos Sociais</a>
+    <a routerLink="/visitante" routerLinkActive="active">Visitante</a>
+    <a routerLink="/historia" routerLinkActive="active">História da Igreja</a>
+    <a routerLink="/missoes" routerLinkActive="active">Missões</a>
+    <a routerLink="/projetos-sociais" routerLinkActive="active">Projetos Sociais</a>
 
   </nav>
 
-  <!-- Conteúdo que muda -->
-  <main class="conteudo">
-    <router-outlet></router-outlet>
-  </main>
+</div>
 
+<div class="conteudo">
+  <router-outlet></router-outlet>
 </div>

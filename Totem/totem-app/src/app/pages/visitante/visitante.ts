@@ -62,7 +62,7 @@ export class Visitante {
       'service_app',     // substitua pelo seu service ID
       'totem-app',    // substitua pelo seu template ID
       templateParams,
-      'N2kopVRR9375dwFWu'   // substitua pela sua public key
+      'keVlD_i8DK1NdgosD'   // substitua pela sua public key
     )
     .then(() => {
 

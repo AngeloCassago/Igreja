@@ -1,4 +1,6 @@
+/* ============================= */
 /* Estrutura da página */
+/* ============================= */
 
 .home{
   min-height:100vh;
@@ -11,17 +13,22 @@
 
   text-align:center;
 
-  padding-top:80px;
+  padding:40px 20px 20px; /* melhor adaptação */
 }
 
+/* ============================= */
 /* Logo */
+/* ============================= */
 
 .logo-home{
-  width:220px;
+  width:180px;
+  max-width:80%;
   margin-bottom:20px;
 }
 
+/* ============================= */
 /* Título */
+/* ============================= */
 
 .home h1{
   font-size:48px;
@@ -29,7 +36,9 @@
   margin-bottom:10px;
 }
 
+/* ============================= */
 /* Texto abaixo do título */
+/* ============================= */
 
 .descricao{
   font-size:24px;
@@ -37,21 +46,28 @@
   margin-bottom:30px;
 }
 
+/* ============================= */
 /* Menu do Totem */
+/* ============================= */
 
 .menu-totem{ 
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:25px;
+
+  width:100%;
 }
 
+/* ============================= */
 /* Botões */
+/* ============================= */
 
 .menu-totem button,
 .btn-menu{
 
-  width:420px;
+  width:100%;
+  max-width:420px;
 
   padding:24px;
 
@@ -70,9 +86,14 @@
   cursor:pointer;
 
   transition:all 0.25s ease;
+
+  /* importante para acessibilidade */
+  min-height:70px;
 }
 
+/* ============================= */
 /* Hover */
+/* ============================= */
 
 .menu-totem button:hover,
 .btn-menu:hover{
@@ -81,4 +102,69 @@
   color:#2F2622;
 
   transform:scale(1.05);
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px){
+
+  .home h1{
+    font-size:40px;
+  }
+
+  .descricao{
+    font-size:22px;
+  }
+
+  .menu-totem button{
+    font-size:24px;
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px){
+
+  .home{
+    padding-top:30px;
+  }
+
+  .home h1{
+    font-size:32px;
+  }
+
+  .descricao{
+    font-size:20px;
+  }
+
+  .menu-totem{
+    gap:15px;
+  }
+
+  .menu-totem button{
+    font-size:20px;
+    padding:18px;
+  }
+
+}
+
+/* Telas grandes (Totem / TV) */
+@media (min-width: 1200px){
+
+  .home h1{
+    font-size:56px;
+  }
+
+  .descricao{
+    font-size:26px;
+  }
+
+  .menu-totem button{
+    font-size:28px;
+    max-width:500px;
+  }
+
 }
