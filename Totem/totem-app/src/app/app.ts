@@ -7,9 +7,11 @@ import { RouterOutlet, RouterLink, Router } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
 
   tempoInatividade: any;
+  menuAberto = false;
 
   constructor(private router: Router){
     this.resetTimer();

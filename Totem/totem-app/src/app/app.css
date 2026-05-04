@@ -1,40 +1,64 @@
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
+
 body{
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* barra superior */
+*{
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* HEADER FIXO */
+/* ============================= */
 
 .topo{
   background:#184F35;
   padding:10px 20px;
 
-  /* mantém o menu visível ao rolar */
-  position:sticky;
+  position:fixed;
   top:0;
+  left:0;
+  width:100%;
+
   z-index:1000;
 
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* menu */
+/* ============================= */
+/* MENU */
+/* ============================= */
 
 .menu{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:20px;
 
-  /* evita quebrar layout em telas menores */
-  flex-wrap:wrap;
+  overflow-x:auto;
+  white-space:nowrap;
 }
 
-/* logo */
+.menu::-webkit-scrollbar{
+  display:none;
+}
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
 
 .logo{
   height:60px;
+  width:auto;
+  flex:0 0 auto;
 }
 
-/* links */
+/* ============================= */
+/* LINKS */
+/* ============================= */
 
 .menu a{
   color:white;
@@ -45,23 +69,30 @@ body{
   padding:10px 5px;
 
   transition:0.2s;
+
+  flex:0 0 auto;
 }
 
 .menu a:hover{
   color:#E3A66A;
 }
 
-/* destaque da página ativa */
-
 .menu a.active{
   border-bottom:3px solid #E3A66A;
   padding-bottom:6px;
 }
 
-/* conteúdo */
+/* ============================= */
+/* CONTEÚDO */
+/* ============================= */
 
 .conteudo{
-  padding:40px;
+  margin-top:100px; /* 🔥 CORREÇÃO PRINCIPAL */
+  padding:20px;
+
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* ============================= */
@@ -70,10 +101,6 @@ body{
 
 /* Tablet */
 @media (max-width: 1024px){
-
-  .menu{
-    gap:20px;
-  }
 
   .menu a{
     font-size:18px;
@@ -88,29 +115,26 @@ body{
     padding:10px;
   }
 
-  .menu{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-  }
-
   .logo{
     height:50px;
   }
 
+  .menu{
+    gap:15px;
+  }
+
   .menu a{
     font-size:18px;
-    width:100%;
-    padding:10px 0;
   }
 
   .conteudo{
+    margin-top:110px;
     padding:20px;
   }
 
 }
 
-/* Telas grandes (totem / TV) */
+/* Telas grandes */
 @media (min-width: 1200px){
 
   .menu a{
@@ -121,4 +145,76 @@ body{
     height:70px;
   }
 
+  .conteudo{
+    margin-top:110px;
+    padding:40px;
+  }
+
+}
+
+/* ============================= */
+/* BOTÃO HAMBURGUER */
+/* ============================= */
+
+.menu-toggle{
+  display:none;
+
+  font-size:28px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+/* ============================= */
+/* LINKS (desktop) */
+/* ============================= */
+
+.links{
+  display:flex;
+  gap:20px;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px){
+
+  .menu{
+    justify-content:space-between;
+  }
+
+  /* mostra botão */
+  .menu-toggle{
+    display:block;
+  }
+
+  /* esconde links inicialmente */
+  .links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+
+    background:#184F35;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:10px 20px;
+
+    display:none;
+  }
+
+  /* quando aberto */
+  .links.ativo{
+    display:flex;
+  }
+
+  .links a{
+    width:100%;
+    padding:12px 0;
+    font-size:18px;
+  }
 }

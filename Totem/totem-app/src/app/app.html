@@ -6,10 +6,18 @@
       <img src="assets/logo.png" class="logo">
     </a>
 
-    <a routerLink="/visitante" routerLinkActive="active">Visitante</a>
-    <a routerLink="/historia" routerLinkActive="active">História da Igreja</a>
-    <a routerLink="/missoes" routerLinkActive="active">Missões</a>
-    <a routerLink="/projetos-sociais" routerLinkActive="active">Projetos Sociais</a>
+    <!-- BOTÃO MOBILE -->
+    <button class="menu-toggle" (click)="menuAberto = !menuAberto">
+      ☰
+    </button>
+
+    <!-- LINKS -->
+    <div class="links" [class.ativo]="menuAberto">
+      <a routerLink="/visitante" (click)="menuAberto=false">Visitante</a>
+      <a routerLink="/historia" (click)="menuAberto=false">História da Igreja</a>
+      <a routerLink="/missoes" (click)="menuAberto=false">Missões</a>
+      <a routerLink="/projetos-sociais" (click)="menuAberto=false">Projetos Sociais</a>
+    </div>
 
   </nav>
 
